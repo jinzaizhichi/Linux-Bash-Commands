@@ -114,13 +114,13 @@ mktemp -d|--directory            # Create a temporary directory
 ## Moving Directories
 
 ```bash
-cp -R|--recursive foo bar                               # Copy directory
-mv foo bar                                              # Move directory
+cp -R|--recursive foo bar                              # Copy directory
+mv foo bar                                             # Move directory
 
-rsync -z|--compress -v|--verbose /foo /bar              # Copy directory, overwrites destination
+rsync -z|--compress -v|--verbose /foo /bar             # Copy directory, overwrites destination
 rsync --ignore-existing -a|--archive-a|--archive -z|--compress -v|--verbose /foo /bar # Copy directory, without overwriting destination
-rsync -avz /foo username@hostname:/bar                  # Copy local directory to remote directory
-rsync -avz username@hostname:/foo /bar                  # Copy remote directory to local directory
+rsync -avz /foo username@hostname:/bar                 # Copy local directory to remote directory
+rsync -avz username@hostname:/foo /bar                 # Copy remote directory to local directory
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
 
@@ -522,18 +522,17 @@ at tomorrow                # Create a task in Vim to execute tomorrow
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
 
-## User management
+## User Management
 
 ```bash
-sudo adduser username 	              # To add a new user
-sudo passwd -l username 	            # To change the password of a user
-sudo userdel username 	              # To remove user
-sudo userdel --remove username        # To remove user with home directory and mail spool
-
-sudo usermod -a -G GROUPNAME USERNAME # To add a user to a group
-sudo deluser USER GROUPNAME 	        # To remove a user from a group
-finger 	                              # Shows information of all the users logged in
-finger username 	                    # Gives information of a particular user
+adduser username                 # To add a new user
+passwd -l username               # To change the password of a user
+userdel username                 # To remove user
+userdel --remove username        # To remove user with home directory and mail spool
+usermod -a -G GROUPNAME USERNAME # To add a user to a group
+deluser USER GROUPNAME           # To remove a user from a group
+finger                           # Shows information of all the users logged in
+finger username                  # Gives information of a particular user
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
 
@@ -580,9 +579,9 @@ nmap -sP 192.168.1.1/24     # Discover all machines on the network by ping'ing t
 ## DNS
 
 ```bash
-dig example.com                # Show the IPv4 and IPv6 addresses
-dig -4 example.com             # Show IPv4 information
-dig -6 example.com             # Show IPv6 information
+dig example.com                # Show query information of a domain A records
+dig -4 example.com             # Show IPv4 A information
+dig -6 example.com             # Show IPv6 AAA information
 dig example.com @nameserver    # Show query of a specific nameserver
 dig example.com -p 123         # Show query of a specific port number
 
