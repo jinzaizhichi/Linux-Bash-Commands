@@ -437,7 +437,7 @@ reboot -f                    # Force a reboot
 ```bash
 top                    # List all processes interactively
 htop                   # List all processes interactively
-ps                     # List all processes
+ps ax                  # List all processes
 pidof foo              # Return the PID of all foo processes
 
 CTRL+Z                 # Suspend a process running in the foreground
