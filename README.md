@@ -68,11 +68,11 @@ history | grep foo                     # View the commands using a specific word
 history | egrep -i 'foo|foo2|FOO|FOO2' # View the commands using more than 1 specific word(case sensitive)
 history | head -n 3                    # View the first 3 executed commands
 history 3                              # View the last 3 executed commands
-history -c
-!!                                      # Run the last command executed
+history -c                             # Clears all history of commands
+!!                                     # Run the last command executed
 
-touch foo.sh                            # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<┐
-chmod +x !$                             # !$ is the last argument of the last command i.e. foo.sh <<<<┘
+touch foo.sh                           # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<┐
+chmod +x !$                            # !$ is the last argument of the last command i.e. foo.sh <<<<┘
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
 
@@ -154,7 +154,7 @@ echo "foo" >> bar.txt      # Append to file with content
 
 ls exists 1> stdout.txt    # Redirect the standard output to a file
 ls noexist 2> stderror.txt # Redirect the standard error output to a file
-ls 2>&1 > out.txt          # Redirect standard output and error to a file
+ls > out.txt 2>&1          # Redirect standard output and error to a file
 ls > /dev/null             # Discard standard output and error
 
 read foo                   # Read from standard input and write to the variable foo
