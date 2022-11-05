@@ -65,7 +65,7 @@ man -k permission    # Display all related commands from a sepecified descriptio
 ```bash
 history                                # View all previous commands
 history | grep foo                     # View the commands using a specific word
-history | egrep -i 'foo|foo2|FOO|FOO2' # View the commands using more than 1 specific word(case sensitive)
+history | egrep -i 'foo|foo2|foo3|'    # View the commands using more than 1 specific word(case sensitive)
 history | head -n 3                    # View the first 3 executed commands
 history 3                              # View the last 3 executed commands
 history -c                             # Clears all history commands
@@ -118,7 +118,7 @@ cp -R|--recursive foo bar                               # Copy directory
 mv foo bar                                              # Move directory
 
 rsync -z|--compress -v|--verbose /foo /bar              # Copy directory, overwrites destination
-rsync -a|--archive -z|--compress -v|--verbose /foo /bar # Copy directory, without overwriting destination
+rsync --ignore-existing -a|--archive-a|--archive -z|--compress -v|--verbose /foo /bar # Copy directory, without overwriting destination
 rsync -avz /foo username@hostname:/bar                  # Copy local directory to remote directory
 rsync -avz username@hostname:/foo /bar                  # Copy remote directory to local directory
 ```
@@ -437,7 +437,7 @@ reboot -f                    # Force a reboot
 ```bash
 top                    # List all processes interactively
 htop                   # List all processes interactively
-ps all                 # List all processes
+ps                     # List all processes
 pidof foo              # Return the PID of all foo processes
 
 CTRL+Z                 # Suspend a process running in the foreground
@@ -525,13 +525,15 @@ at tomorrow                # Create a task in Vim to execute tomorrow
 ## User management
 
 ```bash
-sudo adduser username 	  # To add a new user
-sudo passwd -l 'username' 	  # To change the password of a user
-sudo userdel -r 'username' 	  # To remove a newly created user
-sudo usermod -a -G GROUPNAME USERNAME 	  # To add a user to a group
-sudo deluser USER GROUPNAME 	  # To remove a user from a group
-finger 	  # Shows information of all the users logged in
-finger username 	  # Gives information of a particular user
+sudo adduser username 	              # To add a new user
+sudo passwd -l username 	            # To change the password of a user
+sudo userdel username 	              # To remove user
+sudo userdel --remove username        # To remove user with home directory and mail spool
+
+sudo usermod -a -G GROUPNAME USERNAME # To add a user to a group
+sudo deluser USER GROUPNAME 	        # To remove a user from a group
+finger 	                              # Shows information of all the users logged in
+finger username 	                    # Gives information of a particular user
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
 
@@ -541,12 +543,12 @@ finger username 	  # Gives information of a particular user
 curl https://example.com                               # Return response body
 curl -i|--include https://example.com                  # Include status code and HTTP headers
 curl -L|--location https://example.com                 # Follow redirects
-curl -o|--remote-name foo.txt https://example.com      # Output to a text file
+curl -O|--remote-name foo.txt https://example.com      # Output to a text file
 curl -H|--header "User-Agent: Foo" https://example.com # Add a HTTP header
 curl -X|--request POST -H "Content-Type: application/json" -d|--data '{"foo":"bar"}' https://example.com # POST JSON
 curl -X POST -H --data-urlencode foo="bar" http://example.com                           # POST URL Form Encoded
 
-wget https://example.com/file.txt .                            # Download a file to the current directory
+wget https://example.com/file.txt                              # Download a file to the current directory
 wget -O|--output-document foo.txt https://example.com/file.txt # Output to a file with the specified name
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
@@ -578,11 +580,13 @@ nmap -sP 192.168.1.1/24     # Discover all machines on the network by ping'ing t
 ## DNS
 
 ```bash
-host example.com            # Show the IPv4 and IPv6 addresses
+dig example.com                # Show the IPv4 and IPv6 addresses
+dig -4 example.com             # Show IPv4 information
+dig -6 example.com             # Show IPv6 information
+dig example.com @nameserver    # Show query of a specific nameserver
+dig example.com -p 123         # Show query of a specific port number
 
-dig example.com             # Show complete DNS information
-
-cat /etc/resolv.conf        # resolv.conf lists nameservers
+cat /etc/resolv.conf           # resolv.conf lists nameservers
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
 
@@ -689,7 +693,7 @@ echo ${foo}_'bar'      # Print variable foo followed by _bar
 echo ${foo:-'default'} # Print variable foo if it exists otherwise print default
 
 export foo             # Make foo available to child processes
-unset foo              # Make foo unavailable to child processes
+unset foo              # Make foo unavailable to child processes and current session
 ```
 
 ### Environment Variables
@@ -697,7 +701,7 @@ unset foo              # Make foo unavailable to child processes
 ```bash
 #!/bin/bash
 
-env            # List all environment variables
+set            # List all environment variables
 echo $PATH     # Print PATH environment variable
 export FOO=Bar # Set an environment variable
 ```
@@ -708,7 +712,7 @@ export FOO=Bar # Set an environment variable
 #!/bin/bash
 
 greet() {
-  local world = "World"
+  local world="World"
   echo "$1 $world"
   return "$1 $world"
 }
@@ -758,6 +762,7 @@ echo $?  # Print the last exit code
 ```bash
 #!/bin/bash
 
+[[
 if [[$foo = 'bar']]; then
   echo 'one'
 elif [[$foo = 'bar']] || [[$foo = 'baz']]; then
@@ -767,6 +772,7 @@ elif [[$foo = 'ban']] && [[$USER = 'bat']]; then
 else
   echo 'four'
 fi
+]]
 ```
 
 #### Inline If Statements
@@ -782,12 +788,14 @@ fi
 ```bash
 #!/bin/bash
 
+[
 declare -i counter
 counter=10
 while [$counter -gt 2]; do
   echo The counter is $counter
   counter=counter-1
 done
+]
 ```
 
 #### For Loops
@@ -3862,7 +3870,7 @@ esac
 ---
 
 ###  Online [Cheat Sheet](https://cheat.sh/) :feelsgood: for quick references of commands
-Can be [downloaded](https://github.com/chubin/cheat.sh#installation) for offline usage
+Can [install](https://github.com/chubin/cheat.sh#installation) manually for offline usage
 
 ![image](https://user-images.githubusercontent.com/18756975/200065767-13a6249f-2188-4206-8073-1714be57c408.png)<br>
 Terminal:
