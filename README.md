@@ -68,6 +68,7 @@ history | grep foo                     # View the commands using a specific word
 history | grep -E|--extended-regexp -i|--ignore-case 'foo1|foo2|foo3' # View the commands using more than 1 specific word(case sensitive)
 history | head -n|--lines 3            # View the first 3 executed commands
 history 3                              # View the last 3 executed commands
+history -d 99                          # Clear a command from a specific line 
 history -c                             # Clears all history commands
 !!                                     # Run the last command executed
 
