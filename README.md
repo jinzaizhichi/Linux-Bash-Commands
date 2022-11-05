@@ -68,7 +68,7 @@ history | grep foo                     # View the commands using a specific word
 history | egrep -i 'foo|foo2|FOO|FOO2' # View the commands using more than 1 specific word(case sensitive)
 history | head -n 3                    # View the first 3 executed commands
 history 3                              # View the last 3 executed commands
-history -c                             # Clears all history of commands
+history -c                             # Clears all history commands
 !!                                     # Run the last command executed
 
 touch foo.sh                           # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<┐
@@ -3862,6 +3862,8 @@ esac
 ---
 
 ###  Online [Cheat Sheet](https://cheat.sh/) :feelsgood: for quick references of commands
+Can be [downloaded](https://github.com/chubin/cheat.sh#installation) for offline usage
+
 ![image](https://user-images.githubusercontent.com/18756975/200065767-13a6249f-2188-4206-8073-1714be57c408.png)<br>
 Terminal:
 ```bash
