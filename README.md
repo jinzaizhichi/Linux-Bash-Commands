@@ -54,9 +54,9 @@ _Bash is the Unix command-line interface (CLI). You'll also see it called the te
 ## Command Information
 
 ```bash
-man chmod            # Display page manual of a command
-man -f chmod         # Display short description about a command
-man -k permission    # Display all related commands from a sepecified description
+man chmod                   # Display page manual of a command
+man -f|--whatis chmod       # Display short description about a command
+man -k|--apropos permission # Display all related commands from a sepecified description
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
 
@@ -65,7 +65,7 @@ man -k permission    # Display all related commands from a sepecified descriptio
 ```bash
 history                                # View all previous commands
 history | grep foo                     # View the commands using a specific word
-history | egrep -i 'foo|foo2|foo3|'    # View the commands using more than 1 specific word(case sensitive)
+history | grep -i 'foo|foo2|foo3|'     # View the commands using more than 1 specific word(case sensitive)
 history | head -n 3                    # View the first 3 executed commands
 history 3                              # View the last 3 executed commands
 history -c                             # Clears all history commands
@@ -164,11 +164,11 @@ read foo                   # Read from standard input and write to the variable 
 ## Moving Files
 
 ```bash
-cp foo.txt bar.txt                                # Copy file
-mv foo.txt bar.txt                                # Move file
+cp foo.txt bar.txt                                 # Copy file
+mv foo.txt bar.txt                                 # Move file
 
-rsync -z|--compress -v|--verbose /foo.txt /bar    # Copy file quickly if not changed
-rsync z|--compress -v|--verbose /foo.txt /bar.txt # Copy and rename file quickly if not changed
+rsync -z|--compress -v|--verbose /foo.txt /bar     # Copy file quickly if not changed
+rsync -z|--compress -v|--verbose /foo.txt /bar.txt # Copy and rename file quickly if not changed
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
 
@@ -283,7 +283,7 @@ grep 'foo' /bar -n|--line-number            # Add line numbers
 grep 'foo' /bar --colour                    # Add colour to output
 grep 'foo\|bar' /baz -R                     # Search for 'foo' or 'bar' in directory 'baz'
 grep --extended-regexp|-E 'foo|bar' /baz -R # Use regular expressions
-egrep 'foo|bar' /baz -R                     # Use regular expressions
+grep -E 'foo|bar' /baz -R                     # Use regular expressions
 ```
 
 ### Replace in Files
@@ -389,18 +389,18 @@ free -s|--seconds 5    # Show memory usage and update continuously every five se
 ## Packages
 
 ```bash
-apt update                      # Refreshes repository index
-apt search wget                 # Search for a package
-apt show wget                   # List information about the wget package
-apt list --all-versions wget    # List all versions of the package
-apt install wget                # Install the latest version of the wget package
-apt install wget=1.2.3          # Install a specific version of the wget package
-apt remove wget                 # Removes the wget package
-apt upgrade                     # Upgrades all upgradable packages
-apt clean                       # Clears out the local repository of downloaded package files
+apt update                          # Refreshes repository index
+apt search wget                     # Search for a package
+apt show wget                       # List information about the wget package
+apt list --all-versions wget        # List all versions of the package
+apt install wget                    # Install the latest version of the wget package
+apt install wget=1.2.3              # Install a specific version of the wget package
+apt remove wget                     # Removes the wget package
+apt upgrade                         # Upgrades all upgradable packages
+apt clean                           # Clears out the local repository of downloaded package files
 
-dpkg -i package_name.deb        # Install deb file
-rpm -i package_name.rpm         # Install rpm file 
+dpkg -i|--install package_name.deb  # Install deb file
+rpm -i|--install package_name.rpm   # Install rpm file 
 ```
 
 ### Install package source code
@@ -418,12 +418,12 @@ make install
 
 ```bash
 shutdown                     # Shutdown in 1 minute
-shutdown now "Cya later"     # Immediately shut down
-shutdown +5 "Cya later"      # Shutdown in 5 minutes
+shutdown now                 # Immediately shut down
+shutdown +5                  # Shutdown in 5 minutes
 
-shutdown --reboot            # Reboot in 1 minute
-shutdown -r now "Cya later"  # Immediately reboot
-shutdown -r +5 "Cya later"   # Reboot in 5 minutes
+shutdown -r|--reboot         # Reboot in 1 minute
+shutdown -r|--reboot now     # Immediately reboot
+shutdown -r|--reboot +5      # Reboot in 5 minutes
 
 shutdown -c                  # Cancel a shutdown or reboot
 
@@ -525,14 +525,14 @@ at tomorrow                # Create a task in Vim to execute tomorrow
 ## User Management
 
 ```bash
-adduser username                 # To add a new user
-passwd -l username               # To change the password of a user
-userdel username                 # To remove user
-userdel --remove username        # To remove user with home directory and mail spool
-usermod -a -G GROUPNAME USERNAME # To add a user to a group
-deluser USER GROUPNAME           # To remove a user from a group
-finger                           # Shows information of all the users logged in
-finger username                  # Gives information of a particular user
+adduser username                                   # To add a new user
+passwd -l|--lock username                          # To change the password of a user
+userdel username                                   # To remove user
+userdel -r|--remove username                       # To remove user with home directory and mail spool
+usermod -a|--append -G|--groups GROUPNAME USERNAME # To add a user to a group
+deluser USER GROUPNAME                             # To remove a user from a group
+finger                                             # Shows information of all the users logged in
+finger username                                    # Gives information of a particular user
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
 
