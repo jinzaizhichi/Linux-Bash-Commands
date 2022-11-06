@@ -3895,11 +3895,11 @@ esac
 </tr>
 <tr>
 <td class="tg-yw4l">/</td>
-<td class="tg-yw4l">&nbsp;Filename path separator [forward slash]. Separates the components of a filename (as in /home/trinib/file/file.txt)</td>
+<td class="tg-yw4l">&nbsp;Filename path separator [forward slash]. Separates the components of a filename (as in /home/user/folder/file.txt)</td>
 </tr>
 <tr>
 <td class="tg-yw4l">\</td>
-<td class="tg-yw4l">&nbsp;Escape [backslash]. A quoting mechanism for single characters. \X escapes the character X. This has the effect of "quoting" X, equivalent to 'X'. The \ may be used to quote " and ', so they are expressed literally</td>
+<td class="tg-yw4l">&nbsp;Escape [backslash]. A quoting mechanism for single characters. \X escapes the character X.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">│</td>
@@ -3911,23 +3911,23 @@ esac
 </tr>
 <tr>
 <td class="tg-yw4l">&&</td>
-<td class="tg-yw4l">&nbsp;AND logical operator, the && operator causes a return of 0 (success) only if both the linked test conditions are true</td>
+<td class="tg-yw4l">&nbsp;AND logical causes a return of 0 (success) only if both the linked test conditions are true</td>
 </tr>
 <tr>
 <td class="tg-yw4l">-</td>
-<td class="tg-yw4l">&nbsp;Option, prefix. Option flag for a command or filter. Prefix for an operator. THe default parameter in parameter substitution</td>
+<td class="tg-yw4l">&nbsp;Option flag for a command or filter. The default parameter in parameter substitution</td>
 </tr>
 <tr>
 <td class="tg-yw4l">--</td>
 <td class="tg-yw4l">&nbsp;The double-dash prefixes is the long (verbatim) option flags for commands</td>
 </tr>
 <tr>
-<td class="tg-yw4l"> >, >>, <</td>
-<td class="tg-yw4l">&nbsp;Redirection. Redirect a command's output or input to a file</td>
+<td class="tg-yw4l"> >, >>, < </td>
+<td class="tg-yw4l">&nbsp;Redirect a command's output or input to a file</td>
 </tr>
 <tr>
 <td class="tg-yw4l">>|</td>
-<td class="tg-yw4l">&nbsp;Force redirection (even if the noclobber option is set). This will forcibly overwrite an existing file</td>
+<td class="tg-yw4l">&nbsp;Force redirection (even if the <a href="https://www.google.com/search?q=what+is+noclobber+linux+meaning+%3F&client=firefox-b-d&sxsrf=ALiCzsaMqx0UJyY6f-NOvfTVcUw63t6Gpw%3A1667755043229&ei=I-xnY_7ODYa-kwWElLyoDg&ved=0ahUKEwi-7LHXh5r7AhUG36QKHQQKD-UQ4dUDCA4&uact=5&oq=what+is+noclobber+linux+meaning+%3F&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIHCAAQHhCiBDoKCAAQRxDWBBCwA0oECEEYAEoECEYYAFCsBFiCEmDsEmgCcAF4AIABsgSIAY8HkgEHMy0xLjAuMZgBAKABAcgBCMABAQ&sclient=gws-wiz-serp"><b>noclobber</b></a> option is set). This will forcibly overwrite an existing file</td>
 </tr>
 <tr>
 <td class="tg-yw4l">&</td>
@@ -3935,7 +3935,11 @@ esac
 </tr>
 <tr>
 <td class="tg-yw4l">;</td>
-<td class="tg-yw4l">&nbsp;Command separator. Used to separate multiple commands that are on the same line</td>
+<td class="tg-yw4l">&nbsp;Command separator used to separate multiple commands that are on the same line</td>
+</tr>
+<tr>
+<td class="tg-yw4l">:</td>
+<td class="tg-yw4l">&nbsp;Null command [colon]. This is the shell equivalent of a "NOP" (no op, a do-nothing operation). It may be considered a synonym for the shell builtin true</td>
 </tr>
 <tr>
 <td class="tg-yw4l">"</td>
@@ -3955,11 +3959,11 @@ esac
 </tr>
 <tr>
 <td class="tg-yw4l">' '</td>
-<td class="tg-yw4l">&nbsp;Single quotes. Protect the text inside them so that it has a literal meaning. With them, generally any kind of interpretation by Bash is ignored: special characters are passed over and multiple words are prevented from being split</td>
+<td class="tg-yw4l">&nbsp;Single quotes. Protect the text inside them so that it has a literal meaning</td>
 </tr>
 <tr>
 <td class="tg-yw4l">!</td>
-<td class="tg-yw4l">&nbsp;Reverse (or negate) the sense of a test or exit status [bang]. The ! operator inverts the exit status of the command to which it is applied. It also inverts the meaning of a test operator. This can, for example, change the sense of equal ( = ) to not-equal ( != ). The ! operator is a Bash keyword</td>
+<td class="tg-yw4l">&nbsp;Reverse (or negate) the sense of a test or exit status [bang]. The ! operator inverts the exit status of the command to which it is applied. It also inverts the meaning of a test operator</td>
 </tr>
 <tr>
 <td class="tg-yw4l">*</td>
@@ -3972,6 +3976,10 @@ esac
 <tr>
 <td class="tg-yw4l">( )</td>
 <td class="tg-yw4l">&nbsp;<a href="https://www.google.com/search?q=what+is+linux+Subshell+%3F&client=firefox-b-d&biw=1440&bih=660&sxsrf=ALiCzsanH7oWuGhBf-7bIH_SmJhmw9gGxg%3A1667750422612&ei=FtpnY5KDJdeCwbkP3eejiAc&ved=0ahUKEwiS5o289pn7AhVXQTABHd3zCHEQ4dUDCA4&uact=5&oq=what+is+linux+Subshell+%3F&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzoKCAAQRxDWBBCwA0oECE0YAUoECEEYAEoECEYYAFCyBliyBmC7B2gCcAF4AIABcYgBcZIBAzAuMZgBAKABAcgBCMABAQ&sclient=gws-wiz-serp"><b>Subshell</b></a> group. Used much like a sandbox, if a command causes side effects (like changing variables), it will have no effect on the current shell</td>
+</tr>
+<tr>
+<td class="tg-yw4l">#</td>
+<td class="tg-yw4l">&nbsp;Comment. Lines in files beginning with a # (with the exception of #!) are comments and will not be executed</td>
 </tr>
 </tbody>
 </table>
