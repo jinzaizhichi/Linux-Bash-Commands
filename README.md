@@ -29,9 +29,9 @@ _Bash is the Unix command-line interface (CLI). You'll also see it called the te
 - [Symbolic Links](#symbolic-links)
 - [Compressing Files](#compressing-files)
 - [Decompressing Files](#decompressing-files)
+- [Packages](#packages)
 - [Disk Usage](#disk-usage)
 - [Memory Usage](#memory-usage)
-- [Packages](#packages)
 - [Shutdown and Reboot](#shutdown-and-reboot)
 - [Identifying Processes](#identifying-processes)
 - [Process Priority](#process-priority)
@@ -58,6 +58,7 @@ man --help                  # Display usage options of a command
 man chmod                   # Display page manual of a command
 man -f|--whatis chmod       # Display short description about a command
 man -k|--apropos permission # Display all related commands from a specific keyword
+which man                   # Display locations a command is
 
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
@@ -365,30 +366,6 @@ tar -x|--extract -f|--file=foo.tar              # Un-combine foo.tar into curren
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
 
-## Disk Usage
-
-```bash
-df                     # List disks, size, used and available space
-df -h|--human-readable # List disks, size, used and available space in a human readable format
-
-du                     # List current directory, subdirectories and file sizes
-du /foo/bar            # List specified directory, subdirectories and file sizes
-du -h|--human-readable # List current directory, subdirectories and file sizes in a human readable format
-du -d|--max-depth      # List current directory, subdirectories and file sizes within the max depth
-du -d 0                # List current directory size
-```
-[⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
-
-## Memory Usage
-
-```bash
-free                   # Show memory usage
-free -h|--human        # Show human readable memory usage
-free -h|--human --si   # Show human readable memory usage in power of 1000 instead of 1024
-free -s|--seconds 5    # Show memory usage and update continuously every five seconds
-```
-[⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
-
 ## Packages
 
 ```bash
@@ -417,6 +394,30 @@ make install
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
 
+## Disk Usage
+
+```bash
+df                     # List disks, size, used and available space
+df -h|--human-readable # List disks, size, used and available space in a human readable format
+
+du                     # List current directory, subdirectories and file sizes
+du /foo/bar            # List specified directory, subdirectories and file sizes
+du -h|--human-readable # List current directory, subdirectories and file sizes in a human readable format
+du -d|--max-depth      # List current directory, subdirectories and file sizes within the max depth
+du -d 0                # List current directory size
+```
+[⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
+
+## Memory Usage
+
+```bash
+free                   # Show memory usage
+free -h|--human        # Show human readable memory usage
+free -h|--human --si   # Show human readable memory usage in power of 1000 instead of 1024
+free -s|--seconds 5    # Show memory usage and update continuously every five seconds
+```
+[⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
+
 ## Shutdown and Reboot
 
 ```bash
@@ -427,7 +428,6 @@ shutdown +5                  # Shutdown in 5 minutes
 shutdown -r|--reboot         # Reboot in 1 minute
 shutdown -r|--reboot now     # Immediately reboot
 shutdown -r|--reboot +5      # Reboot in 5 minutes
-
 shutdown -c                  # Cancel a shutdown or reboot
 
 reboot                       # Reboot now
@@ -490,7 +490,8 @@ date --iso-8601=ns              # Print the ISO8601 date and time
 date -s "02 DEC 2020 12:02:02"  # Manually change date and time
 dpkg-reconfigure tzdata         # Change date/timezone
 
-time tree                       # Time how long the tree command takes to execute
+uptime                          # Print how long the system has been running
+time tree                       # Print amount of time to tree takes to execute
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
 
@@ -500,7 +501,6 @@ time tree                       # Time how long the tree command takes to execut
    *      *         *         *           *
 Minute, Hour, Day of month, Month, Day of the week
 ```
-[⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
 
 ```bash
 crontab -l                 # List cron tab
@@ -592,6 +592,7 @@ dig example.com @nameserver    # Show query of a specific nameserver
 dig example.com -p 123         # Show query of a specific port number
 
 cat /etc/resolv.conf           # resolv.conf lists nameservers
+/etc/systemd/resolved.conf     # resolved.conf list DNS service
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
 
