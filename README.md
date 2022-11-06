@@ -3883,7 +3883,15 @@ esac
 </tr>
 <tr>
 <td class="tg-yw4l">~</td>
-<td class="tg-yw4l">&nbsp;Directory [tilde]. The current user's home directory</td>
+<td class="tg-yw4l">&nbsp;Home directory [tilde]. The current user's home directory</td>
+</tr>
+<tr>
+<td class="tg-yw4l">~+</td>
+<td class="tg-yw4l">&nbsp;Current working directory</td>
+</tr>
+<tr>
+<td class="tg-yw4l">~-</td>
+<td class="tg-yw4l">&nbsp;Previous working directory</td>
 </tr>
 <tr>
 <td class="tg-yw4l">/</td>
@@ -3907,11 +3915,11 @@ esac
 </tr>
 <tr>
 <td class="tg-yw4l">-</td>
-<td class="tg-yw4l">&nbsp;Option, prefix. Option flag for a command or filter. Prefix for an operator. Prefix for a default parameter in parameter substitution</td>
+<td class="tg-yw4l">&nbsp;Option, prefix. Option flag for a command or filter. Prefix for an operator. THe default parameter in parameter substitution</td>
 </tr>
 <tr>
 <td class="tg-yw4l">--</td>
-<td class="tg-yw4l">&nbsp;The double-dash -- prefixes long (verbatim) options to commands</td>
+<td class="tg-yw4l">&nbsp;The double-dash prefixes is the long (verbatim) option flags for commands</td>
 </tr>
 <tr>
 <td class="tg-yw4l"> >, >>, <</td>
@@ -3955,13 +3963,15 @@ esac
 </tr>
 <tr>
 <td class="tg-yw4l">*</td>
-<td class="tg-yw4l">&nbsp;Wild card [asterisk]. The * character serves as a "wild card" for filename expansion in globbing. By itself, it matches every filename in a given directory</td>
-</tr><tr>
-<td class="tg-yw4l">( )</td>
-<td class="tg-yw4l">&nbsp;Subshell group. Similar to the above but where commands within are executed in a subshell (a new process). Used much like a sandbox, if a command causes side effects (like changing variables), it will have no effect on the current shell</td>
-</tr><tr>
+<td class="tg-yw4l">&nbsp;Wild card [asterisk]. <a href="https://www.google.com/search?q=what+is+linux+glob+%3F&client=firefox-b-d&biw=1440&bih=660&sxsrf=ALiCzsaMw9MR2_Iwug39KvXQs2zbE3oNeA%3A1667750326107&ei=ttlnY82SBv2rwbkPrOmP6Ao&ved=0ahUKEwjNxYuO9pn7AhX9VTABHaz0A60Q4dUDCA4&uact=5&oq=what+is+linux+glob+%3F&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIGCAAQFhAeMggIABAWEB4QDzIGCAAQFhAeMggIABAWEB4QDzIGCAAQFhAeMgYIABAWEB4yCAgAEBYQHhAPMgUIABCGAzIFCAAQhgM6CggAEEcQ1gQQsANKBAhNGAFKBAhBGABKBAhGGABQ4AVYqwhgzgpoAXABeACAAYABiAHwAZIBAzAuMpgBAKABAcgBCMABAQ&sclient=gws-wiz-serp"><b>Glob</b></a>, "wildcard" characters which match parts of filenames (e.g. ls *.txt)
+</td>
+<tr>
 <td class="tg-yw4l">{ }</td>
 <td class="tg-yw4l">&nbsp;Inline group. Commands inside the curly braces are treated as if they were one command. It is convenient to use these when Bash syntax requires only one command and a function doesn't feel warranted</td>
+</tr>
+<tr>
+<td class="tg-yw4l">( )</td>
+<td class="tg-yw4l">&nbsp;<a href="https://www.google.com/search?q=what+is+linux+Subshell+%3F&client=firefox-b-d&biw=1440&bih=660&sxsrf=ALiCzsanH7oWuGhBf-7bIH_SmJhmw9gGxg%3A1667750422612&ei=FtpnY5KDJdeCwbkP3eejiAc&ved=0ahUKEwiS5o289pn7AhVXQTABHd3zCHEQ4dUDCA4&uact=5&oq=what+is+linux+Subshell+%3F&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzoKCAAQRxDWBBCwA0oECE0YAUoECEEYAEoECEYYAFCyBliyBmC7B2gCcAF4AIABcYgBcZIBAzAuMZgBAKABAcgBCMABAQ&sclient=gws-wiz-serp"><b>Subshell</b></a> group. Used much like a sandbox, if a command causes side effects (like changing variables), it will have no effect on the current shell</td>
 </tr>
 </tbody>
 </table>
