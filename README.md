@@ -54,10 +54,11 @@ _Bash is the Unix command-line interface (CLI). You'll also see it called the te
 ## Command Information
 
 ```bash
-man --help                  # Display usage options of a command
 man chmod                   # Display page manual of a command
 man -f|--whatis chmod       # Display short description about a command
 man -k|--apropos permission # Display all related commands from a specific keyword
+
+chmod --help                # Display usage options of a command
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
 
@@ -589,8 +590,8 @@ dig -6 example.com             # Show IPv6 AAA information
 dig example.com @nameserver    # Show query of a specific nameserver
 dig example.com -p 123         # Show query of a specific port number
 
-cat /etc/resolv.conf           # resolv.conf lists nameservers
-/etc/systemd/resolved.conf     # resolved.conf list DNS service
+cat /etc/resolv.conf               # Nameservers
+cat /etc/systemd/resolved.conf     # DNS resolver 
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
 
@@ -1228,7 +1229,7 @@ esac
 </tr>
 <tr>
 <td class="tg-yw4l">chroot</td>
-<td class="tg-yw4l">&nbsp;Run a command with root privileges.</td>
+<td class="tg-yw4l">&nbsp;Run a command with root directory.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">chrt</td>
@@ -3868,6 +3869,103 @@ esac
 </table>
 
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴛᴏᴩ](#table) 
+</p>
+ </details>
+ 
+<details><summary><h3>Special Characters 🔣</h3></summary>
+<p>
+ 
+<table class="tg">
+<tbody>
+<tr>
+<th class="tg-yw4l">Char.</th>
+<th class="tg-yw4l">Description</th>
+</tr>
+<tr>
+<td class="tg-yw4l">~</td>
+<td class="tg-yw4l">&nbsp;Directory [tilde]. The current user's home directory</td>
+</tr>
+<tr>
+<td class="tg-yw4l">/</td>
+<td class="tg-yw4l">&nbsp;Filename path separator [forward slash]. Separates the components of a filename (as in /home/trinib/file/file.txt)</td>
+</tr>
+<tr>
+<td class="tg-yw4l">\</td>
+<td class="tg-yw4l">&nbsp;Escape [backslash]. A quoting mechanism for single characters. \X escapes the character X. This has the effect of "quoting" X, equivalent to 'X'. The \ may be used to quote " and ', so they are expressed literally</td>
+</tr>
+<tr>
+<td class="tg-yw4l">│</td>
+<td class="tg-yw4l">&nbsp;Pipe. Passes the output (stdout) of a previous command to the input (stdin) of the next one, or to the shell. This is a method of chaining commands together</td>
+</tr>
+<tr>
+<td class="tg-yw4l">||</td>
+<td class="tg-yw4l">&nbsp;OR logical operator operator causes a return of 0 (success) if either of the linked test conditions is true</td>
+</tr>
+<tr>
+<td class="tg-yw4l">&&</td>
+<td class="tg-yw4l">&nbsp;AND logical operator, the && operator causes a return of 0 (success) only if both the linked test conditions are true</td>
+</tr>
+<tr>
+<td class="tg-yw4l">-</td>
+<td class="tg-yw4l">&nbsp;Option, prefix. Option flag for a command or filter. Prefix for an operator. Prefix for a default parameter in parameter substitution</td>
+</tr>
+<tr>
+<td class="tg-yw4l">--</td>
+<td class="tg-yw4l">&nbsp;The double-dash -- prefixes long (verbatim) options to commands</td>
+</tr>
+<tr>
+<td class="tg-yw4l"> >, >>, <</td>
+<td class="tg-yw4l">&nbsp;Redirection. Redirect a command's output or input to a file</td>
+</tr>
+<tr>
+<td class="tg-yw4l">>|</td>
+<td class="tg-yw4l">&nbsp;Force redirection (even if the noclobber option is set). This will forcibly overwrite an existing file</td>
+</tr>
+<tr>
+<td class="tg-yw4l">&</td>
+<td class="tg-yw4l">&nbsp;Run job in background. A command followed by an & will run in the background</td>
+</tr>
+<tr>
+<td class="tg-yw4l">;</td>
+<td class="tg-yw4l">&nbsp;Command separator. Used to separate multiple commands that are on the same line</td>
+</tr>
+<tr>
+<td class="tg-yw4l">"</td>
+<td class="tg-yw4l">&nbsp;Partial quoting [double quote]. "STRING" preserves (from interpretation) most of the special characters within STRING</td>
+</tr>
+<tr>
+<td class="tg-yw4l">'</td>
+<td class="tg-yw4l">&nbsp;Full quoting [single quote]. 'STRING' preserves all special characters within STRING. This is a stronger form of quoting than "STRING"</td>
+</tr>
+<tr>
+<td class="tg-yw4l">""</td>
+<td class="tg-yw4l">&nbsp;Double quotes. protect the text inside them from being split into multiple words or arguments, yet allow substitutions to occur; the meaning of most other special characters is usually prevented</td>
+</tr>
+<tr>
+<td class="tg-yw4l">" "</td>
+<td class="tg-yw4l">&nbsp;Whitespace. this is a tab, newline, vertical tab, form feed, carriage return, or space. Bash uses whitespace to determine where words begin and end. The first word is the command name and additional words become arguments to that command</td>
+</tr>
+<tr>
+<td class="tg-yw4l">' '</td>
+<td class="tg-yw4l">&nbsp;Single quotes. Protect the text inside them so that it has a literal meaning. With them, generally any kind of interpretation by Bash is ignored: special characters are passed over and multiple words are prevented from being split</td>
+</tr>
+<tr>
+<td class="tg-yw4l">!</td>
+<td class="tg-yw4l">&nbsp;Reverse (or negate) the sense of a test or exit status [bang]. The ! operator inverts the exit status of the command to which it is applied. It also inverts the meaning of a test operator. This can, for example, change the sense of equal ( = ) to not-equal ( != ). The ! operator is a Bash keyword</td>
+</tr>
+<tr>
+<td class="tg-yw4l">*</td>
+<td class="tg-yw4l">&nbsp;Wild card [asterisk]. The * character serves as a "wild card" for filename expansion in globbing. By itself, it matches every filename in a given directory</td>
+</tr><tr>
+<td class="tg-yw4l">( )</td>
+<td class="tg-yw4l">&nbsp;Subshell group. Similar to the above but where commands within are executed in a subshell (a new process). Used much like a sandbox, if a command causes side effects (like changing variables), it will have no effect on the current shell</td>
+</tr><tr>
+<td class="tg-yw4l">{ }</td>
+<td class="tg-yw4l">&nbsp;Inline group. Commands inside the curly braces are treated as if they were one command. It is convenient to use these when Bash syntax requires only one command and a function doesn't feel warranted</td>
+</tr>
+</tbody>
+</table>
+
 </p>
  </details>
 
