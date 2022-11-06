@@ -8,7 +8,7 @@ _Bash is the Unix command-line interface (CLI). You'll also see it called the te
 <p>
   
 >**Note**<br>
->  Examples like `-a|--all` option flags means, single `-` used for _short_ option(-a) **or( | )**  double `--` used for _long_ option(--all). Both was added for educational purpose.
+>  Examples like `-a|--all` option flags means, single `-` used for _short_ option(-a) **or**|  double `--` used for _long_ option(--all). Both was added for educational purpose.
 
 ### Contents
 - [Command Information](#command-information)
@@ -54,9 +54,11 @@ _Bash is the Unix command-line interface (CLI). You'll also see it called the te
 ## Command Information
 
 ```bash
+man --help                  # Display usage options of a command
 man chmod                   # Display page manual of a command
 man -f|--whatis chmod       # Display short description about a command
-man -k|--apropos permission # Display all related commands from a sepecified description
+man -k|--apropos permission # Display all related commands from a specific keyword
+
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
 
@@ -532,8 +534,9 @@ userdel username                                   # To remove user
 userdel -r|--remove username                       # To remove user with home directory and mail spool
 usermod -a|--append -G|--groups GROUPNAME USERNAME # To add a user to a group
 deluser USER GROUPNAME                             # To remove a user from a group
-finger                                             # Shows information of all the users logged in
-finger username                                    # Gives information of a particular user
+
+last                                               # Shows information of all the users logged in
+last username                                      # Gives information of a particular user
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
 
@@ -561,6 +564,8 @@ ping -c 10 -i 5 example.com # Make 10 attempts, 5 seconds apart
 
 ip addr                     # List IP addresses on the system
 ip route show               # Show IP addresses to router
+
+curl ifconfig.me            # Obtain external IP address
 
 netstat -i|--interfaces     # List all network interfaces and in/out usage
 netstat -l|--listening      # List all open ports
@@ -3869,8 +3874,7 @@ esac
 
 ---
 
-###  Online [Cheat Sheet](https://cheat.sh/) :feelsgood: for quick references of commands
-Can [install](https://github.com/chubin/cheat.sh#installation) manually for offline usage
+###  Online Cheat Sheet :feelsgood: for quick references of commands and codes
 
 ![image](https://user-images.githubusercontent.com/18756975/200065767-13a6249f-2188-4206-8073-1714be57c408.png)<br>
 Terminal:
@@ -3883,3 +3887,5 @@ Browser:
 
 [https://cht.sh/](https://cht.sh/)keyword<br>
 [https://cheat.sh/](https://cheat.sh/)keyword
+
+Can [install](https://github.com/chubin/cheat.sh#installation) manually for offline usage
