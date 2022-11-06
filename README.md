@@ -286,7 +286,7 @@ grep 'foo' /bar -n|--line-number            # Add line numbers
 grep 'foo' /bar --colour                    # Add colour to output
 grep 'foo\|bar' /baz -R                     # Search for 'foo' or 'bar' in directory 'baz'
 grep --extended-regexp|-E 'foo|bar' /baz -R # Use regular expressions
-grep -E 'foo|bar' /baz -R                     # Use regular expressions
+grep -E 'foo|bar' /baz -R                   # Use regular expressions
 ```
 
 ### Replace in Files
@@ -548,7 +548,7 @@ curl -L|--location https://example.com                 # Follow redirects
 curl -O|--remote-name foo.txt https://example.com      # Output to a text file
 curl -H|--header "User-Agent: Foo" https://example.com # Add a HTTP header
 curl -X|--request POST -H "Content-Type: application/json" -d|--data '{"foo":"bar"}' https://example.com # POST JSON
-curl -X POST -H --data-urlencode foo="bar" http://example.com                           # POST URL Form Encoded
+curl -X POST -H --data-urlencode foo="bar" http://example.com  # POST URL Form Encoded
 
 wget https://example.com/file.txt                              # Download a file to the current directory
 wget -O|--output-document foo.txt https://example.com/file.txt # Output to a file with the specified name
@@ -584,14 +584,14 @@ nmap -sP 192.168.1.1/24     # Discover all machines on the network by ping'ing t
 ## DNS
 
 ```bash
-dig example.com                # Show query information of a domain A records
-dig -4 example.com             # Show IPv4 A information
-dig -6 example.com             # Show IPv6 AAA information
-dig example.com @nameserver    # Show query of a specific nameserver
-dig example.com -p 123         # Show query of a specific port number
+dig example.com                 # Show query information of domain A records
+dig -4 example.com              # Show IPv4 A records
+dig -6 example.com              # Show IPv6 AAA records
+dig example.com @nameserver     # Show query of a specific nameserver
+dig example.com -p 123          # Show query of a specific port number
 
-cat /etc/resolv.conf               # Nameservers
-cat /etc/systemd/resolved.conf     # DNS resolver 
+cat /etc/resolv.conf            # Nameservers file
+cat /etc/systemd/resolved.conf  # DNS resolver config file
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
 
@@ -3907,11 +3907,11 @@ esac
 </tr>
 <tr>
 <td class="tg-yw4l">||</td>
-<td class="tg-yw4l">&nbsp;OR logical operator operator causes a return of 0 (success) if either of the linked test conditions is true</td>
+<td class="tg-yw4l">&nbsp;OR logical operator causes a return of 0 (success) if either of the linked test conditions is true</td>
 </tr>
 <tr>
 <td class="tg-yw4l">&&</td>
-<td class="tg-yw4l">&nbsp;AND logical causes a return of 0 (success) only if both the linked test conditions are true</td>
+<td class="tg-yw4l">&nbsp;AND logical operator causes a return of 0 (success) only if both the linked test conditions are true</td>
 </tr>
 <tr>
 <td class="tg-yw4l">-</td>
@@ -3951,7 +3951,7 @@ esac
 </tr>
 <tr>
 <td class="tg-yw4l">""</td>
-<td class="tg-yw4l">&nbsp;Double quotes. protect the text inside them from being split into multiple words or arguments, yet allow substitutions to occur; the meaning of most other special characters is usually prevented</td>
+<td class="tg-yw4l">&nbsp;Double quotes. protect the text inside them from being split into multiple words or arguments, yet allow substitutions to occur, meaning most other special characters is usually prevented</td>
 </tr>
 <tr>
 <td class="tg-yw4l">" "</td>
@@ -3986,11 +3986,37 @@ esac
 
 </p>
  </details>
+ 
+ 
+<details><summary><h3>Keyboard Control ⌨️<h3></summary>
+<p> 
+
+| Key     | Function     |
+| :--: | :-- |
+| Ctrl+a     |  Moves cursor to beginning of text in line |
+| Ctrl+e     |  Moves cursor to end of text in line |
+| Ctrl+b     |  Moves cursor backward one character position  |
+| Ctrl+f     | Moves cursor forward one character position    |
+| Ctrl+p     | Recalls last command from history buffer    |
+| Ctrl+r     | Search for coammnds in history buffer   |
+| Ctrl+u     | Erase a line of input, from the cursor backward to beginning of line  |
+| Ctrl+y     | Pastes back text previously erased    |
+| Ctrl+t     | Reverses the position of the character the cursor is on with the previous character |
+| Ctrl+o     | Issues a newline  |
+| Ctrl+z     | Pauses a foreground job  |
+| Ctrl+c     | Break/Terminate a foreground job |
+| Ctrl+s     | Suspend  |
+| Ctrl+q     | Resume |
+| Ctrl+d     | Log out from a shell (similar to exit) |
+ 
+</p>
+ </details>
 
 ---
 
 ###  Online Cheat Sheet :feelsgood: for quick references of commands and codes
 
+[cheat.sh](https://github.com/chubin/cheat.sh)<br>
 ![image](https://user-images.githubusercontent.com/18756975/200065767-13a6249f-2188-4206-8073-1714be57c408.png)<br>
 Terminal:
 ```bash
@@ -4003,4 +4029,11 @@ Browser:
 [https://cht.sh/](https://cht.sh/)keyword<br>
 [https://cheat.sh/](https://cheat.sh/)keyword
 
-Can [install](https://github.com/chubin/cheat.sh#installation) manually for offline usage
+Can [install](https://github.com/chubin/cheat.sh#installation) manually for offline usage<br>
+```bash
+# Install for all users:
+curl -s https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh && sudo chmod +x /usr/local/bin/cht.sh
+
+# Run script:
+cht.sh
+```
