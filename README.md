@@ -1,4 +1,5 @@
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=blue)[![Bash Shell](https://badges.frapsoft.com/bash/v1/bash-175x30.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=blue)[![Bash Shell](https://badges.frapsoft.com/bash/v1/bash-175x30.png?v=103)](https://github.com/ellerbrock/open-source-badges/)<br>
+<img src="https://img.shields.io/badge/License-MIT-blue.svg">
 
 # Ultimate list of Linux bash commands
 
@@ -3886,14 +3887,6 @@ esac
 <td class="tg-yw4l">&nbsp;Home directory [tilde]. The current user's home directory</td>
 </tr>
 <tr>
-<td class="tg-yw4l">~+</td>
-<td class="tg-yw4l">&nbsp;Current working directory</td>
-</tr>
-<tr>
-<td class="tg-yw4l">~-</td>
-<td class="tg-yw4l">&nbsp;Previous working directory</td>
-</tr>
-<tr>
 <td class="tg-yw4l">/</td>
 <td class="tg-yw4l">&nbsp;Filename path separator [forward slash]. Separates the components of a filename (as in /home/user/folder/file.txt)</td>
 </tr>
@@ -3903,7 +3896,7 @@ esac
 </tr>
 <tr>
 <td class="tg-yw4l">│</td>
-<td class="tg-yw4l">&nbsp;Pipe. Passes the output (stdout) of a previous command to the input (stdin) of the next one, or to the shell. This is a method of chaining commands together</td>
+<td class="tg-yw4l">&nbsp;Pipe. It passes the output (stdout) of a previous command to the input (stdin) of the next one, or to the shell. This is a method of chaining commands together</td>
 </tr>
 <tr>
 <td class="tg-yw4l">||</td>
@@ -3923,7 +3916,7 @@ esac
 </tr>
 <tr>
 <td class="tg-yw4l"> >, >>, < </td>
-<td class="tg-yw4l">&nbsp;Redirect a command's output or input to a file</td>
+<td class="tg-yw4l">&nbsp;Redirect a command's output or input into a file</td>
 </tr>
 <tr>
 <td class="tg-yw4l">>|</td>
@@ -3935,7 +3928,7 @@ esac
 </tr>
 <tr>
 <td class="tg-yw4l">;</td>
-<td class="tg-yw4l">&nbsp;Command separator used to separate multiple commands that are on the same line</td>
+<td class="tg-yw4l">&nbsp;Command separator [semicolon]. Used to separate multiple commands that are on the same line</td>
 </tr>
 <tr>
 <td class="tg-yw4l">:</td>
@@ -3955,7 +3948,7 @@ esac
 </tr>
 <tr>
 <td class="tg-yw4l">" "</td>
-<td class="tg-yw4l">&nbsp;Whitespace. this is a tab, newline, vertical tab, form feed, carriage return, or space. Bash uses whitespace to determine where words begin and end. The first word is the command name and additional words become arguments to that command</td>
+<td class="tg-yw4l">&nbsp;Whitespace. this is a tab, newline, vertical tab, form feed, carriage return, or space. Bash uses whitespace to determine where words begin and end</td>
 </tr>
 <tr>
 <td class="tg-yw4l">' '</td>
@@ -3963,7 +3956,7 @@ esac
 </tr>
 <tr>
 <td class="tg-yw4l">!</td>
-<td class="tg-yw4l">&nbsp;Reverse (or negate) the sense of a test or exit status [bang]. The ! operator inverts the exit status of the command to which it is applied. It also inverts the meaning of a test operator</td>
+<td class="tg-yw4l">&nbsp;Reverse (or negate) [exclamation]. The ! operator inverts the exit status of the command to which it is applied. It also inverts the meaning of a test operator</td>
 </tr>
 <tr>
 <td class="tg-yw4l">*</td>
@@ -3971,15 +3964,15 @@ esac
 </td>
 <tr>
 <td class="tg-yw4l">{ }</td>
-<td class="tg-yw4l">&nbsp;Inline group. Commands inside the curly braces are treated as if they were one command. It is convenient to use these when Bash syntax requires only one command and a function doesn't feel warranted</td>
+<td class="tg-yw4l">&nbsp;Inline group [curly brackets]. Commands inside the curly braces are treated as if they were one command. It is convenient to use these when Bash syntax requires only one command and a function doesn't feel warranted</td>
 </tr>
 <tr>
 <td class="tg-yw4l">( )</td>
-<td class="tg-yw4l">&nbsp;<a href="https://www.google.com/search?q=what+is+linux+Subshell+%3F&client=firefox-b-d&biw=1440&bih=660&sxsrf=ALiCzsanH7oWuGhBf-7bIH_SmJhmw9gGxg%3A1667750422612&ei=FtpnY5KDJdeCwbkP3eejiAc&ved=0ahUKEwiS5o289pn7AhVXQTABHd3zCHEQ4dUDCA4&uact=5&oq=what+is+linux+Subshell+%3F&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzoKCAAQRxDWBBCwA0oECE0YAUoECEEYAEoECEYYAFCyBliyBmC7B2gCcAF4AIABcYgBcZIBAzAuMZgBAKABAcgBCMABAQ&sclient=gws-wiz-serp"><b>Subshell</b></a> group. Used much like a sandbox, if a command causes side effects (like changing variables), it will have no effect on the current shell</td>
+<td class="tg-yw4l">&nbsp;<a href="https://www.google.com/search?q=what+is+linux+Subshell+%3F&client=firefox-b-d&biw=1440&bih=660&sxsrf=ALiCzsanH7oWuGhBf-7bIH_SmJhmw9gGxg%3A1667750422612&ei=FtpnY5KDJdeCwbkP3eejiAc&ved=0ahUKEwiS5o289pn7AhVXQTABHd3zCHEQ4dUDCA4&uact=5&oq=what+is+linux+Subshell+%3F&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzoKCAAQRxDWBBCwA0oECE0YAUoECEEYAEoECEYYAFCyBliyBmC7B2gCcAF4AIABcYgBcZIBAzAuMZgBAKABAcgBCMABAQ&sclient=gws-wiz-serp"><b>Subshell</b></a> group [bracket]. Used much like a sandbox, if a command causes side effects (like changing variables), it will have no effect on the current shell</td>
 </tr>
 <tr>
 <td class="tg-yw4l">#</td>
-<td class="tg-yw4l">&nbsp;Comment. Lines in files beginning with a # (with the exception of #!) are comments and will not be executed</td>
+<td class="tg-yw4l">&nbsp;Comment [number sign]. Lines in files beginning with a # (with the exception of #!) are comments and will not be executed</td>
 </tr>
 </tbody>
 </table>
@@ -3993,19 +3986,19 @@ esac
 
 | Key     | Function     |
 | :--: | :-- |
-| Ctrl+a     |  Moves cursor to beginning of text in line |
-| Ctrl+e     |  Moves cursor to end of text in line |
-| Ctrl+b     |  Moves cursor backward one character position  |
-| Ctrl+f     | Moves cursor forward one character position    |
-| Ctrl+p     | Recalls last command from history buffer    |
-| Ctrl+r     | Search for coammnds in history buffer   |
-| Ctrl+u     | Erase a line of input, from the cursor backward to beginning of line  |
-| Ctrl+y     | Pastes back text previously erased    |
+| Ctrl+a     | Moves cursor to beginning of text in line |
+| Ctrl+e     | Moves cursor to end of text in line |
+| Ctrl+b     | Moves cursor backward one character position |
+| Ctrl+f     | Moves cursor forward one character position  |
+| Ctrl+p     | Recalls last command from history buffer  |
+| Ctrl+r     | Search for commnds in history buffer   |
+| Ctrl+u     | Erase a line of input, from the cursor backward to beginning of line |
+| Ctrl+y     | Pastes back text previously erased |
 | Ctrl+t     | Reverses the position of the character the cursor is on with the previous character |
-| Ctrl+o     | Issues a newline  |
+| Ctrl+o     | Issues a newline |
 | Ctrl+z     | Pauses a foreground job  |
 | Ctrl+c     | Break/Terminate a foreground job |
-| Ctrl+s     | Suspend  |
+| Ctrl+s     | Suspend |
 | Ctrl+q     | Resume |
 | Ctrl+d     | Log out from a shell (similar to exit) |
  
@@ -4029,7 +4022,8 @@ Browser:
 [https://cht.sh/](https://cht.sh/)keyword<br>
 [https://cheat.sh/](https://cheat.sh/)keyword
 
-Can [install](https://github.com/chubin/cheat.sh#installation) manually for offline usage<br>
+#
+#### [Install](https://github.com/chubin/cheat.sh#installation) cheat script manually for offline usage<br>
 ```bash
 # Install for all users:
 curl -s https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh && sudo chmod +x /usr/local/bin/cht.sh
@@ -4037,3 +4031,4 @@ curl -s https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh && sudo chmod +x
 # Run script:
 cht.sh
 ```
+---
