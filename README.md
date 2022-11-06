@@ -58,8 +58,6 @@ man --help                  # Display usage options of a command
 man chmod                   # Display page manual of a command
 man -f|--whatis chmod       # Display short description about a command
 man -k|--apropos permission # Display all related commands from a specific keyword
-which man                   # Display locations a command is
-
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
 
@@ -239,9 +237,9 @@ chmod +x foo.sh          # Give everybody execute permission
 Find binary files for a command.
 
 ```bash
-type wget                                  # Find the binary
-which wget                                 # Find the binary
-whereis wget                               # Find the binary, source, and manual page files
+type -a wget                              # Display all locations of executable
+which -a wget                             # Display all locations of executables 
+whereis wget                              # Find the binary, source, and manual page files
 ```
 
 `locate` uses an index and is fast.
