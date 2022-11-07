@@ -192,7 +192,7 @@ _Bash is the Unix command-line interface (CLI). Also called the terminal, the co
 </tr>
 <tr>
 <td class="tg-yw4l">autoscan</td>
-<td class="tg-yw4l">Generate a preliminary configure.in.</td>
+<td class="tg-yw4l">Generate a preliminary configure.in file.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">autoupdate</td>
@@ -3215,6 +3215,7 @@ cat foo.txt            # Print all contents
 less foo.txt           # Print some contents at a time (g - go to top of file, SHIFT+g, go to bottom of file, /foo to search for 'foo')
 head foo.txt           # Print top 10 lines of file
 tail foo.txt           # Print bottom 10 lines of file
+tail -f foo.txt        # Print bottom 10 lines of file updating with new data
 open foo.txt           # Open file in the default editor
 wc foo.txt             # List number of lines words and characters in the file
 ```
@@ -3884,111 +3885,111 @@ esac
 </tr>
 <tr>
 <td class="tg-yw4l">~</td>
-<td class="tg-yw4l">Home directory [tilde]. The current user's home directory location</td>
+<td class="tg-yw4l">Home directory [tilde]. The current user's home directory location.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">-</td>
-<td class="tg-yw4l">Previous directory [dash]. Go back to previous directories</td>
+<td class="tg-yw4l">Previous directory [dash]. Go back to previous directories.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">/</td>
-<td class="tg-yw4l">Filename path separator [forward slash]. Separates the components of a filename</td>
+<td class="tg-yw4l">Filename path separator [forward slash]. Separates the components of a filename.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">\</td>
-<td class="tg-yw4l">Escape [backslash]. A quoting mechanism for single characters. \X escapes the character X. It preserves the literal value of the next character that follows, with the exception of newline</td>
+<td class="tg-yw4l">Escape [backslash]. A quoting mechanism for single characters. \X escapes the character X. It preserves the literal value of the next character that follows, with the exception of newline.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">│</td>
-<td class="tg-yw4l">Pipe. It passes the output (stdout) of a previous command to the input (stdin) of the next one, or to the shell. This is a method of chaining commands together</td>
+<td class="tg-yw4l">Pipe. It passes the output (stdout) of a previous command to the input (stdin) of the next one, or to the shell. This is a method of chaining commands together.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">||</td>
-<td class="tg-yw4l">The OR logical operator causes a return of 0 (success) if either of the linked test conditions is true</td>
+<td class="tg-yw4l">The OR logical operator causes a return of 0 (success) if either of the linked test conditions is true.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">&&</td>
-<td class="tg-yw4l">The AND logical operator causes a return of 0 (success) only if both the linked test conditions are true</td>
+<td class="tg-yw4l">The AND logical operator causes a return of 0 (success) only if both the linked test conditions are true.</td>
 </tr>
 <tr>
 <td class="tg-yw4l"> >, >>, < </td>
-<td class="tg-yw4l">Redirect a command's output or input into a file</td>
+<td class="tg-yw4l">Redirect a command's output or input into a file.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">>|</td>
-<td class="tg-yw4l">Force redirection (even if the <a href="https://www.google.com/search?q=what+is+noclobber+bash+meaning+%3F&client=firefox-b-d&sxsrf=ALiCzsYjxhOR8rNOMWPfYf5DFKIqA_f7SA%3A1667859549077&ei=XYRpY4uiBMLhxgGuwoP4Cw&ved=0ahUKEwjLxNT_jJ37AhXCsDEKHS7hAL8Q4dUDCA4&uact=5&oq=what+is+noclobber+bash+meaning+%3F&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIHCCMQsAMQJzIKCAAQRxDWBBCwAzIKCAAQRxDWBBCwAzIKCAAQRxDWBBCwAzIKCAAQRxDWBBCwAzIKCAAQRxDWBBCwAzIKCAAQRxDWBBCwAzIKCAAQRxDWBBCwAzIKCAAQRxDWBBCwA0oECE0YAUoECEEYAEoECEYYAFAAWABg0gFoAXABeACAAQCIAQCSAQCYAQDIAQnAAQE&sclient=gws-wiz-serp"><b>noclobber</b></a> option is set). This will forcibly overwrite an existing file</td>
+<td class="tg-yw4l">Force redirection (even if the <a href="https://www.google.com/search?q=what+is+noclobber+bash+meaning+%3F&client=firefox-b-d&sxsrf=ALiCzsYjxhOR8rNOMWPfYf5DFKIqA_f7SA%3A1667859549077&ei=XYRpY4uiBMLhxgGuwoP4Cw&ved=0ahUKEwjLxNT_jJ37AhXCsDEKHS7hAL8Q4dUDCA4&uact=5&oq=what+is+noclobber+bash+meaning+%3F&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIHCCMQsAMQJzIKCAAQRxDWBBCwAzIKCAAQRxDWBBCwAzIKCAAQRxDWBBCwAzIKCAAQRxDWBBCwAzIKCAAQRxDWBBCwAzIKCAAQRxDWBBCwAzIKCAAQRxDWBBCwAzIKCAAQRxDWBBCwA0oECE0YAUoECEEYAEoECEYYAFAAWABg0gFoAXABeACAAQCIAQCSAQCYAQDIAQnAAQE&sclient=gws-wiz-serp"><b>noclobber</b></a> option is set). This will forcibly overwrite an existing file.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">&</td>
-<td class="tg-yw4l">Run job in background. A command followed by an & will run in the background</td>
+<td class="tg-yw4l">Run job in background[and]. A command followed by an & will run in the background.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">#</td>
-<td class="tg-yw4l">Comment [number sign]. Lines in files beginning with a # (with the exception of #!) are comments and will not be executed</td>
+<td class="tg-yw4l">Comment [number sign]. Lines in files beginning with a # (with the exception of #!) are comments and will not be executed.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">""</td>
-<td class="tg-yw4l">Double quotes protects the text inside them from being split into multiple words or arguments, yet allow substitutions to occur, meaning most other special characters is usually prevented</td>
+<td class="tg-yw4l">Double quotes protects the text inside them from being split into multiple words or arguments, yet allow substitutions to occur, meaning most other special characters is usually prevented.</td>
 <tr>
 <td class="tg-yw4l">' '</td>
-<td class="tg-yw4l">Single quotes protects the text inside them so that it has a literal meaning. This is a stronger form of quoting than " "</td>
+<td class="tg-yw4l">Single quotes protects the text inside them so that it has a literal meaning. This is a stronger form of quoting than " ".</td>
 </tr>
 </tr>
 <tr>
 <td class="tg-yw4l">" "</td>
-<td class="tg-yw4l">Whitespace. This is a tab, newline, vertical tab, form feed, carriage return, or space. Bash uses whitespace to determine where words begin and end</td>
+<td class="tg-yw4l">Whitespace. This is a tab, newline, vertical tab, form feed, carriage return, or space. Bash uses whitespace to determine where words begin and end.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">;</td>
-<td class="tg-yw4l">Command separator [semicolon]. Used to separate multiple commands that are on the same line</td>
+<td class="tg-yw4l">Command separator [semicolon]. Used to separate multiple commands that are on the same line.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">:</td>
-<td class="tg-yw4l">Null command [colon]. This is the shell equivalent of a "NOP" (no op, a do-nothing operation). It may be considered a synonym for the shell builtin true</td>
+<td class="tg-yw4l">Null command [colon]. This is the shell equivalent of a "NOP" (no op, a do-nothing operation). It may be considered a synonym for the shell builtin true.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">!</td>
-<td class="tg-yw4l">Reverse (or negate) [exclamation]. The ! operator inverts the exit status of the command to which it is applied. It also inverts the meaning of a test operator</td>
+<td class="tg-yw4l">Reverse (or negate) [exclamation]. The ! operator inverts the exit status of the command to which it is applied. It also inverts the meaning of a test operator.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">*</td>
-<td class="tg-yw4l">Wild card [asterisk]. The * character serves as a "wild card" for filename expansion in <a href="https://www.google.com/search?q=What+is+globbing+in+shell%3F&client=firefox-b-d&sxsrf=ALiCzsYC9z8Ynyd5KFHYK7jo2SDHxrCuxg%3A1667844117587&ei=FUhpY77DI46ykvQPlPO_8A8&ved=0ahUKEwj-oa3B05z7AhUOmYQIHZT5D_4Q4dUDCA4&uact=5&oq=What+is+globbing+in+shell%3F&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIICAAQFhAeEA8yBQgAEIYDMgUIABCGAzIFCAAQhgMyBQgAEIYDOgQIABBHSgQITRgBSgQIQRgASgQIRhgAUPdAWPdAYJ9DaABwA3gAgAGdAYgBnQGSAQMwLjGYAQCgAQKgAQHIAQjAAQE&sclient=gws-wiz-serp"><b>globbing</b></a>. By itself, it matches every filename in a given directory
+<td class="tg-yw4l">Wild card [asterisk]. The * character serves as a "wild card" for filename expansion in <a href="https://www.google.com/search?q=What+is+globbing+in+shell%3F&client=firefox-b-d&sxsrf=ALiCzsYC9z8Ynyd5KFHYK7jo2SDHxrCuxg%3A1667844117587&ei=FUhpY77DI46ykvQPlPO_8A8&ved=0ahUKEwj-oa3B05z7AhUOmYQIHZT5D_4Q4dUDCA4&uact=5&oq=What+is+globbing+in+shell%3F&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIICAAQFhAeEA8yBQgAEIYDMgUIABCGAzIFCAAQhgMyBQgAEIYDOgQIABBHSgQITRgBSgQIQRgASgQIRhgAUPdAWPdAYJ9DaABwA3gAgAGdAYgBnQGSAQMwLjGYAQCgAQKgAQHIAQjAAQE&sclient=gws-wiz-serp"><b>globbing</b></a>. By itself, it matches every filename in a given directory.
 </td>
 <tr>
 <td class="tg-yw4l">?</td>
-<td class="tg-yw4l">Wild card[qestion mark]. The ? character serves as a single-character "wild card" for filename expansion in globbing, as well as representing one character in an extended regular expression</td>
+<td class="tg-yw4l">Wild card[qestion mark]. The ? character serves as a single-character "wild card" for filename expansion in globbing, as well as representing one character in an extended regular expression.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">{ }</td>
-<td class="tg-yw4l">Inline group [curly brackets]. Commands inside the curly braces are treated as if they were one command. It is convenient to use these when Bash syntax requires only one command and a function doesn't feel warranted</td>
+<td class="tg-yw4l">Inline group [curly brackets]. Commands inside the curly braces are treated as if they were one command. It is convenient to use these when Bash syntax requires only one command and a function doesn't feel warranted.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">( )</td>
-<td class="tg-yw4l"><a href="https://www.google.com/search?q=what+is+linux+Subshell+%3F&client=firefox-b-d&biw=1440&bih=660&sxsrf=ALiCzsanH7oWuGhBf-7bIH_SmJhmw9gGxg%3A1667750422612&ei=FtpnY5KDJdeCwbkP3eejiAc&ved=0ahUKEwiS5o289pn7AhVXQTABHd3zCHEQ4dUDCA4&uact=5&oq=what+is+linux+Subshell+%3F&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzoKCAAQRxDWBBCwA0oECE0YAUoECEEYAEoECEYYAFCyBliyBmC7B2gCcAF4AIABcYgBcZIBAzAuMZgBAKABAcgBCMABAQ&sclient=gws-wiz-serp"><b>Subshell</b></a> group [bracket].Commands within are executed in a subshell (a new process) Used much like a sandbox, if a command causes side effects (like changing variables), it will have no effect on the current shell</td>
+<td class="tg-yw4l"><a href="https://www.google.com/search?q=what+is+linux+Subshell+%3F&client=firefox-b-d&biw=1440&bih=660&sxsrf=ALiCzsanH7oWuGhBf-7bIH_SmJhmw9gGxg%3A1667750422612&ei=FtpnY5KDJdeCwbkP3eejiAc&ved=0ahUKEwiS5o289pn7AhVXQTABHd3zCHEQ4dUDCA4&uact=5&oq=what+is+linux+Subshell+%3F&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzoKCAAQRxDWBBCwA0oECE0YAUoECEEYAEoECEYYAFCyBliyBmC7B2gCcAF4AIABcYgBcZIBAzAuMZgBAKABAcgBCMABAQ&sclient=gws-wiz-serp"><b>Subshell</b></a> group [bracket].Commands within are executed in a subshell (a new process) Used much like a sandbox, if a command causes side effects (like changing variables), it will have no effect on the current shell.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">[ ]</td>
-<td class="tg-yw4l">Test expression between [ ]. Is part of the shell builtin test</td>
+<td class="tg-yw4l">Test expression between [ ]. Is part of the shell builtin test.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">[[ ]]</td>
-<td class="tg-yw4l">Test expression between [[ ]]. More flexible than the single-bracket [ ] test</td>
+<td class="tg-yw4l">Test expression between [[ ]]. More flexible than the single-bracket [ ] test.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">(( ))</td>
-<td class="tg-yw4l">Integer expansion. Expand and evaluate integer expression between (( ))</td>
+<td class="tg-yw4l">Integer expansion. Expand and evaluate integer expression.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">;;</td>
-<td class="tg-yw4l">Terminator in a case option [double semicolon]</td>
+<td class="tg-yw4l">Terminator in a case option [double semicolon].</td>
 </tr>
 <tr>
 <td class="tg-yw4l">,, ,</td>
-<td class="tg-yw4l">Lowercase conversion in parameter substitution</td>
+<td class="tg-yw4l">Lowercase conversion in parameter substitution.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">^, ^^</td>
-<td class="tg-yw4l">Uppercase conversion in parameter substitution</td>
+<td class="tg-yw4l">Uppercase conversion in parameter substitution.</td>
 </tr>
 </tbody>
 </table>
@@ -4030,21 +4031,21 @@ esac
 
 [cheat.sh](https://github.com/chubin/cheat.sh)<br>
 ![image](https://user-images.githubusercontent.com/18756975/200065767-13a6249f-2188-4206-8073-1714be57c408.png)<br>
-Terminal:
+#### Terminal:
 ```bash
 curl cht.sh/keyword
 # or
 curl cheat.sh/keyword
 ```
-Browser:
+#### Browser:
 
-[https://cht.sh/](https://cht.sh/)keyword<br>
-[https://cheat.sh/](https://cheat.sh/)keyword
+>   [https://cht.sh/](https://cht.sh/)keyword<br>
+>   or<br>
+>   [https://cheat.sh/](https://cheat.sh/)keyword
 
-#
-#### [Install](https://github.com/chubin/cheat.sh#installation) cheat script manually for offline usage<br>
+#### Offline usage [Install](https://github.com/chubin/cheat.sh#installation) cheat script manually:<br>
 ```bash
-# Install for all users:
+# Install globally(all users):
 curl -s https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh && sudo chmod +x /usr/local/bin/cht.sh
 
 # Run script:
