@@ -4016,7 +4016,7 @@ esac
 | Ctrl+z     | Pauses a foreground job  |
 | Ctrl+c     | Break/Terminate a foreground job |
 | Ctrl+o     | Accept the current line for execution and fetch the next command |
-| Ctrl+l     | Clear screen |
+| Ctrl+l     | Clear screen (command line needs to be empty) |
 | Ctrl+s     | Suspend |
 | Ctrl+q     | Resume |
 | Ctrl+d     | Log out from a shell (similar to exit) |
