@@ -4009,7 +4009,6 @@ esac
 </p>
  </details>
  
- 
 <details><summary><h3>Keyboard control ⌨️<h3></summary>
 <p> 
 
@@ -4019,14 +4018,17 @@ esac
 | Ctrl+e     | Moves cursor to end of text in line |
 | Ctrl+b     | Moves cursor backward one character position |
 | Ctrl+f     | Moves cursor forward one character position  |
-| Ctrl+p     | Recalls last command from history buffer  |
-| Ctrl+r     | Search for commnds in history buffer   |
-| Ctrl+u     | Erase a line of input, from the cursor backward to beginning of line |
-| Ctrl+y     | Pastes back text previously erased |
+| Ctrl+p     | Fetch previous command from history buffer  |
+| Ctrl+n     | Fetch next command from history buffer  |
+| Ctrl+r     | Reverse search commands in history buffer   |
+| Ctrl+u     | Erase a line of input from cursor right to left of line |
+| Ctrl+k     | Erase a line of input from cursor left to right of line |
+| Ctrl+y     | Fetch back command previously erased |
 | Ctrl+t     | Reverses the position of the character the cursor is on with the previous character |
-| Ctrl+o     | Issues a newline |
 | Ctrl+z     | Pauses a foreground job  |
 | Ctrl+c     | Break/Terminate a foreground job |
+| Ctrl+o     | Accept the current line for execution and fetch the next command |
+| Ctrl+l     | Clear screen |
 | Ctrl+s     | Suspend |
 | Ctrl+q     | Resume |
 | Ctrl+d     | Log out from a shell (similar to exit) |
