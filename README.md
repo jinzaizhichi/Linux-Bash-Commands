@@ -40,7 +40,7 @@ _Bash is the Unix command-line interface (CLI). Also called the terminal, the co
 </tr>
 <tr>
 <td class="tg-yw4l">aclocal</td>
-<td class="tg-yw4l">GNU autoconf too.</td>
+<td class="tg-yw4l">GNU autoconf tool.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">aconnect</td>
@@ -225,7 +225,7 @@ _Bash is the Unix command-line interface (CLI). Also called the terminal, the co
 </tr>
 <tr>
 <td class="tg-yw4l">basename</td>
-<td class="tg-yw4l">Used to display filenames with directoy or suffix.</td>
+<td class="tg-yw4l">Used to display filenames with directory or suffix.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">bash</td>
@@ -261,7 +261,7 @@ _Bash is the Unix command-line interface (CLI). Also called the terminal, the co
 </tr>
 <tr>
 <td class="tg-yw4l">builtin</td>
-<td class="tg-yw4l">Used to run shell builtin commands, make custom functions forcommands extending their functionality.</td>
+<td class="tg-yw4l">Used to run shell builtin commands, make custom functions for commands extending their functionality.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">bzcmp</td>
@@ -644,7 +644,7 @@ _Bash is the Unix command-line interface (CLI). Also called the terminal, the co
 <tbody>
 <tr>
 <th class="tg-yw4l">Command</th>
-<th class="tg-yw4l">Desription</th>
+<th class="tg-yw4l">Description</th>
 </tr>
 <tr>
 <td class="tg-yw4l">e2fsck</td>
@@ -1246,7 +1246,7 @@ _Bash is the Unix command-line interface (CLI). Also called the terminal, the co
 </tr>
 <tr>
 <td class="tg-yw4l">kudzu</td>
-<td class="tg-yw4l">Used to detect new and enhanced hardware by comparing it with existing database. Only for RHEL and derivates.</td>
+<td class="tg-yw4l">Used to detect new and enhanced hardware by comparing it with existing database. Only for RHEL and derivatives.</td>
 </tr>
 </tbody>
 </table>
@@ -1331,7 +1331,7 @@ _Bash is the Unix command-line interface (CLI). Also called the terminal, the co
 </tr>
 <tr>
 <td class="tg-yw4l">lockfile</td>
-<td class="tg-yw4l">Create semaphore file(s) which can beused to limit access to a file.</td>
+<td class="tg-yw4l">Create semaphore file(s) which can be used to limit access to a file.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">logger</td>
@@ -1371,7 +1371,7 @@ _Bash is the Unix command-line interface (CLI). Also called the terminal, the co
 </tr>
 <tr>
 <td class="tg-yw4l">lpinfo</td>
-<td class="tg-yw4l">Shows the list of avaiable devices and drivers known to the CUPS server.</td>
+<td class="tg-yw4l">Shows the list of available devices and drivers known to the CUPS server.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">lpmove</td>
@@ -1806,7 +1806,7 @@ _Bash is the Unix command-line interface (CLI). Also called the terminal, the co
 </tr>
 <tr>
 <td class="tg-yw4l">op</td>
-<td class="tg-yw4l">Operator access, allows system administrators to grant users access to certain rootoperations that require superuser privileges.</td>
+<td class="tg-yw4l">Operator access, allows system administrators to grant users access to certain root operations that require superuser privileges.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">open</td>
@@ -1835,7 +1835,7 @@ _Bash is the Unix command-line interface (CLI). Also called the terminal, the co
 </tr>
 <tr>
 <td class="tg-yw4l">paste</td>
-<td class="tg-yw4l">Merge lines of files. Write to standard output, TAB-separated lines consisting of sqentially correspnding lines from each file.</td>
+<td class="tg-yw4l">Merge lines of files. Write to standard output, TAB-separated lines consisting of sequentially corresponding lines from each file.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">patch</td>
@@ -1931,7 +1931,7 @@ _Bash is the Unix command-line interface (CLI). Also called the terminal, the co
 </tr>
 <tr>
 <td class="tg-yw4l">pwconv</td>
-<td class="tg-yw4l">Creates shadow from passwdand an optionally existing shadow.</td>
+<td class="tg-yw4l">Creates shadow from passwd and an optionally existing shadow.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">pwd</td>
@@ -2013,7 +2013,7 @@ _Bash is the Unix command-line interface (CLI). Also called the terminal, the co
 </tr>
 <tr>
 <td class="tg-yw4l">rarpd</td>
-<td class="tg-yw4l">Respond to Reverse Address Resoultion Protocol (RARP) requests.</td>
+<td class="tg-yw4l">Respond to Reverse Address Resolution Protocol (RARP) requests.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">rcp</td>
@@ -2049,7 +2049,7 @@ _Bash is the Unix command-line interface (CLI). Also called the terminal, the co
 </tr>
 <tr>
 <td class="tg-yw4l">readelf</td>
-<td class="tg-yw4l">Shows information about ELF (Executable and Linkable fomrat) files.</td>
+<td class="tg-yw4l">Shows information about ELF (Executable and Linkable format) files.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">readlink</td>
@@ -2165,7 +2165,7 @@ _Bash is the Unix command-line interface (CLI). Also called the terminal, the co
 </tr>
 <tr>
 <td class="tg-yw4l">rpm</td>
-<td class="tg-yw4l">A package manager for linux distributions. Originally developed for RedHat Linux.</td>
+<td class="tg-yw4l">A package manager for Linux distributions. Originally developed for RedHat Linux.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">rsh</td>
@@ -2234,7 +2234,7 @@ _Bash is the Unix command-line interface (CLI). Also called the terminal, the co
 </tr>
 <tr>
 <td class="tg-yw4l">scanimage</td>
-<td class="tg-yw4l">Read images from image aquistion devices (scanner or camera) and display on standard output in PNM (Portable aNyMap) format.</td>
+<td class="tg-yw4l">Read images from image acquisition devices (scanner or camera) and display on standard output in PNM (Portable aNyMap) format.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">scp</td>
@@ -2262,7 +2262,7 @@ _Bash is the Unix command-line interface (CLI). Also called the terminal, the co
 </tr>
 <tr>
 <td class="tg-yw4l">sendmail</td>
-<td class="tg-yw4l">It’s a mail router or an MTA (Mail Transfer Agent). sendmail support can send a mail to one or more recepients using necessary protocols.</td>
+<td class="tg-yw4l">It’s a mail router or an MTA (Mail Transfer Agent). sendmail support can send a mail to one or more recipients using necessary protocols.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">sensors</td>
@@ -2507,7 +2507,7 @@ _Bash is the Unix command-line interface (CLI). Also called the terminal, the co
 </tr>
 <tr>
 <td class="tg-yw4l">talk</td>
-<td class="tg-yw4l">A two-way screen-oriented communication utility that allows two user to exchange messages simulateneously.</td>
+<td class="tg-yw4l">A two-way screen-oriented communication utility that allows two user to exchange messages simultaneously.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">talkd</td>
@@ -2631,7 +2631,7 @@ _Bash is the Unix command-line interface (CLI). Also called the terminal, the co
 </tr>
 <tr>
 <td class="tg-yw4l">tune2fs</td>
-<td class="tg-yw4l">Adjust tunable filesystem parameters on ext2/ext3/ext4 filesystems.</td>
+<td class="tg-yw4l">Adjust tuneable filesystem parameters on ext2/ext3/ext4 filesystems.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">tunelp</td>
@@ -2899,7 +2899,6 @@ _Bash is the Unix command-line interface (CLI). Also called the terminal, the co
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴛᴏᴩ](#table)
 <h2> Y</h2>
 
-
 <table class="tg">
 <tbody>
 <tr>
@@ -2952,7 +2951,7 @@ _Bash is the Unix command-line interface (CLI). Also called the terminal, the co
 </tr>
 <tr>
 <td class="tg-yw4l">ypset</td>
-<td class="tg-yw4l">Point a client (running ypbind) to a specifc server (running ypserv).</td>
+<td class="tg-yw4l">Point a client (running ypbind) to a specific server (running ypserv).</td>
 </tr>
 <tr>
 <td class="tg-yw4l">yptest</td>
